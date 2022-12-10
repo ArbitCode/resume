@@ -24,14 +24,15 @@ build(){
 			bibtex $1 >/dev/null 2>&1
         fi
     done
-    log $1 "compiled"
+    log $1 "compiled successfully"
     mv -f "$1.pdf" .. >/dev/null 2>&1
 	mv -f "$1.tex" .. >/dev/null 2>&1
     return 0
 }
+#bash start
 command -v latexmk > /dev/null
 if [[ $? -ne 0 ]]; then
-    echo "Xelatex is missing, texlive-full may not be installed"
+    echo "Latexmk is missing, texlive-full may not be installed"
     return 1
 fi;
 command -v bibtex > /dev/null
@@ -39,7 +40,8 @@ if [[ $? -ne 0 ]]; then
     echo "Bibtex is missing, texlive-full may not be installed"
     return 1
 fi;
-echo "$(tput setaf 11)Parallel build started$(tput sgr 0)"
+echo "$(tput setaf 11)Build started$(tput sgr 0)"
+mkdir latex >/dev/null 2>&1
 mv -f $1 latex >/dev/null 2>&1
 cd latex
 build Rajaram_resume &
