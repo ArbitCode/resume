@@ -1,0 +1,6 @@
+*.aux
+*.f*
+*.log
+*.out
+*.gz
+/aux
