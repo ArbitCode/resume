@@ -11,12 +11,13 @@ build(){
     mkdir -p .latex
     pdflatex -interaction=nonstopmode -output-directory=.latex "$1.tex" >/dev/null 2>&1
     if [[ $? -ne 0 ]]; then
-        log $1 "failed"
+        log $1 "build failed"
         return 1
     fi
     log $1 "compiled successfully"
     rm -f "./$1.pdf" >/dev/null 2>&1
     mv -f "./.latex/$1.pdf" . >/dev/null 2>&1
+    rm -rf ./.latex
     return 0
 }
 #bash start
