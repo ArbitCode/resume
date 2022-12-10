@@ -8,12 +8,15 @@ log(){
 }
 build(){
     log $1 "compiling"
-    pdflatex -interaction=nonstopmode "$1.tex" >/dev/null 2>&1
+    mkdir -p .latex
+    pdflatex -interaction=nonstopmode -output-directory=.latex "$1.tex" >/dev/null 2>&1
     if [[ $? -ne 0 ]]; then
         log $1 "failed"
         return 1
     fi
     log $1 "compiled successfully"
+    rm -f "./$1.pdf" >/dev/null 2>&1
+    mv -f "./.latex/$1.pdf" . >/dev/null 2>&1
     return 0
 }
 #bash start
