@@ -7,7 +7,6 @@ log(){
     echo "[$BASHPID] $1: $2"
 }
 build(){
-    rm -f "$1.pdf"
     log $1 "compiling"
     local PASSES=3
     for i in $(seq $PASSES); do
