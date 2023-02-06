@@ -67,7 +67,7 @@
     "workbench.editor.showTabs": true,
     "workbench.editor.closeEmptyGroups": true,
     "workbench.editor.closeOnFileDelete": false,
-    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreview": false,
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.settings.editor": "ui",
     "workbench.settings.useSplitJSON": true,
@@ -993,5 +993,8 @@
     "vsintellicode.python.completionsEnabled": true,
     "vsintellicode.java.completionsEnabled": true,
     "vsintellicode.typescript.completionsEnabled": true,
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "cSpell.words": [
+        "Hackthon"
+    ]
 }
