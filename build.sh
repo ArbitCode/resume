@@ -30,3 +30,6 @@ echo "$(tput setaf 11)Build started$(tput sgr 0)"
 build Rajaram_resume &
 wait
 echo "Build completed in $SECONDS seconds"
+
+mv Rajaram_resume.pdf out/Rajaram_resume.pdf
+echo "output file is out/Rajaram_resume.pdf"
