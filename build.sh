@@ -30,7 +30,7 @@ echo "$(tput setaf 11)Build started$(tput sgr 0)"
 build Rajaram_resume &
 wait
 echo "Build completed in $SECONDS seconds"
-cp Rajaram_resume.pdf /Users/arbitcode/GoogleDriveSync
-echo "Copied file to /Users/arbitcode/GoogleDriveSync"
+cp Rajaram_resume.pdf "/Users/arbitcode/Google Drive/My Drive/resume"
+echo "Copied file on Goggle Drive at /Users/arbitcode/Google Drive/My Drive/resume"
 mv Rajaram_resume.pdf out/Rajaram_resume.pdf
 echo "Moved output file to out/Rajaram_resume.pdf"
