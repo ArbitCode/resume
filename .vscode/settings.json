@@ -29,7 +29,7 @@
         140
     ],
     "editor.cursorStyle": "line",
-    "editor.cursorSmoothCaretAnimation": false,
+    "editor.cursorSmoothCaretAnimation": "off",
     "editor.smoothScrolling": true,
     "editor.mouseWheelZoom": false,
     "editor.multiCursorModifier": "ctrlCmd",
@@ -58,7 +58,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderIndicators": true,
     "diffEditor.renderSideBySide": true,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Default Light+ Experimental",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "welcomePage",
     "workbench.sideBar.location": "left",
@@ -995,6 +995,7 @@
     "vsintellicode.typescript.completionsEnabled": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "cSpell.words": [
-        "Hackthon"
+        "Hackthon",
+        "Sharma"
     ]
 }
