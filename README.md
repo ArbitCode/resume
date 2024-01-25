@@ -6,4 +6,4 @@ This is the repository for my resumé.
 
 Alternatively, you can build the PDF yourself using the provided `build.sh` file.
 
-1. `sh build.sh RajaRamSharma_C++_3_0Yrs.tex`
+1. `./build.sh`
