@@ -2,4 +2,4 @@
 
 **Download Resume:**
 
-[Rajaram_resume.pdf](https://drive.google.com/file/d/12_1E9rpEyZtu333sXmii5DpfFe3MWdX_/view)
+[Rajaram_resume.pdf](https://drive.google.com/open?id=11pbGw8lnnMxAlDzV-zXrejgkBi8hZeOl)
