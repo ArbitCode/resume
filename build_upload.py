@@ -53,7 +53,8 @@ def get_public_link():
     for file in files:
         if file["Name"] == os.path.basename(OUTPUT_FILE):
             file_id = file["ID"]
-            return f"https://drive.google.com/uc?id={file_id}&export=download"
+            # return f"https://drive.google.com/uc?id={file_id}&export=download"
+            return f"https://drive.google.com/file/d/{file_id}/view"
 
     print("Error: Could not retrieve file ID. Upload might have failed.")
     exit(1)
