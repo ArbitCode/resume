@@ -1,9 +1,5 @@
-# Resumé
+# Rajaram's Resume
 
-This is the repository for my resumé.
+**Download Resume:**
 
-* Rajaram_resume : [Download](https://github.com/ArbitCode/resume/raw/master/out/Rajaram_resume.pdf)
-
-Alternatively, you can build the PDF yourself using the provided `build.sh` file.
-
-1. `./build.sh`
+[Rajaram_resume.pdf](https://drive.google.com/uc?id=12_1E9rpEyZtu333sXmii5DpfFe3MWdX_&export=download)
