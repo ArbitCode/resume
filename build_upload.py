@@ -2,6 +2,7 @@ import subprocess
 import json
 import os
 import shutil
+import getpass
 
 # === Configuration ===
 FILE_NAME = "Rajaram_resume"
@@ -41,11 +42,10 @@ def upload_to_drive():
     print(f"Uploading {OUTPUT_FILE} to Google Drive...")
     run_command(f"rclone copy {OUTPUT_FILE} {REMOTE_FOLDER}")
     run_command(f"rm -rf {OUTPUT_DIR}")
+    return run_command(f"rclone link {REMOTE_FOLDER}/{FILE_NAME}.pdf")
 
-def update_readme():
+def update_readme(public_link):
     """Updates readme.md with the new download link."""
-    public_link = run_command(f"rclone link {REMOTE_FOLDER}/{FILE_NAME}.pdf")
-    print(f"Upload completed! Resume Download Link: {public_link}")
     with open(README_FILE, "w") as readme:
         readme.write("# Rajaram's Resume\n\n")
         readme.write("**Download Resume:**\n\n")
@@ -55,8 +55,9 @@ def update_readme():
 def main():
     check_dependencies()
     compile_latex()
-    upload_to_drive()
-    update_readme()
+    public_link = upload_to_drive()
+    update_readme(public_link)
+    print(f"Upload completed! Resume Download Link: {public_link}")
 
 if __name__ == "__main__":
     main()
