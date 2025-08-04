@@ -1,0 +1,156 @@
+%===========================
+% Resume using AltaCV Class
+% Author: Raja Ram Sharma
+%===========================
+
+\documentclass[10pt,a4paper,withhyper]{altacv}
+
+% Page geometry and column separation
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% Required for 2-column layout
+\usepackage{paracol}
+
+% Use Lato font (pdflatex or xelatex-compatible)
+\iftutex
+  \setmainfont{Lato}
+\else
+  \usepackage[default]{lato}
+\fi
+
+%-------------- COLOR CONFIG --------------
+% Setting all colors to black for minimal and clean look
+\definecolor{Black}{HTML}{000000}
+\colorlet{heading}{Black}
+\colorlet{headingrule}{Black}
+\colorlet{accent}{Black}
+\colorlet{emphasis}{Black}
+\colorlet{body}{Black}
+
+% Customize item and rating markers
+\renewcommand{\cvItemMarker}{{\small\textbullet}}
+\renewcommand{\cvRatingMarker}{\faCircle}
+%-------------- BEGIN DOCUMENT --------------
+\begin{document}
+
+%---------- HEADER ----------
+\name{RAJA RAM SHARMA}
+\tagline{}
+
+% Personal information block
+\personalinfo{%
+  \email{rajaramsharma422@gmail.com}
+  \phone{+91-92055 74290}
+  \linkedin{ArbitCode}
+  \github{ArbitCode}
+  \location{New Delhi, India}
+}
+
+% Renders the header using above info
+\makecvheader
+
+% Smaller font in itemize environments
+\AtBeginEnvironment{itemize}{\small}
+
+% Ratio of left:right column
+\columnratio{0.6}
+
+% Start the two-column layout
+\begin{paracol}{2}
+
+%---------- LEFT COLUMN ----------
+\cvsection{Experience}
+
+% IBM job
+\cvevent{Software Engineer 2}{IBM, ISDL (India Systems Development Lab)}{Oct 2024 -- Ongoing}{India}
+\begin{itemize}
+   \item Implementing customer managed policies that can attach to entities (IAM users, IAM groups, and IAM Roles).
+    \item Contributed pull requests (C++, Python) to the open-source Ceph organization: \href{https://tinyurl.com/ceph-prs}{View PRs}.
+    \item Developed AWS-compatible IAM APIs (e.g., \textit{GetAccountSummary}, \textit{GetCallerIdentity}) to support identity validation and permission introspection for enterprise clients.
+    \item Implemented the \textit{RemoveClientIDFromOpenIDConnectProvider} IAM API in RGW to allow dynamic client ID management for OIDC providers.
+    \item Implemented integration tests(Python) to validate IAM APIs, improving automated test coverage and upstream compatibility standards.
+\end{itemize}
+
+\divider
+
+% OpenText job
+\cvevent{Software Engineer}{OpenText}{Nov 2021 -- Oct 2024}{Bangalore, India}
+\begin{itemize}
+    \item Implemented ZDB and IR techniques features utilize mirror and snapshot technologies of disk-based arrays.
+    Create, at high speed, a copy of the data to be backed up and then perform backup operations on the copy, rather than on the original data.
+    Restore a backup copy of data, held on the array, to its original location on the array to facilitate high-speed recovery.
+    \item Led the development of granular VM backup and recovery functionality used by 50+ enterprise clients, reducing manual restore efforts by 60\% and Implemented multiple REST APIs using Java, JDBC, and PostgreSQL to enable file access for web clients.
+    \item Improved Data Protector's VMware, H3C CAS, and PostgreSQL modules, increasing backup coverage by 30\%.
+    \item Developed secure, maintainable C++, Java, and Perl code using design patterns and memory-safe practices.
+    \item Resolved 50+ bugs and loopholes from customer-reported incidents, improving product stability.
+\end{itemize}
+
+\divider
+
+% Internship
+\cvevent{Software Engineer Intern}{Midland Credit Management}{Feb 2021 --  Nov 2021}{Gurgaon, India}
+\begin{itemize}
+    \item Built API-based automation on MuleSoft(iPaaS) to transfer over 10,000 files from SFTP to S3 with near real-time alerts, reducing manual operations by 70\%.
+    \item Implemented AWS-based back-end workflows using Lambda, S3, and DynamoDB, resulting in 35\% improvement in data processing speed.
+    \item Worked as part of a 10-member agile team; delivered 20+ JIRA-tracked tasks.
+\end{itemize}
+
+% Conference section
+\cvsection{Conference Talks}
+\cvevent{Ceph Days India 2025, Ceph RGW}{User Accounts Feature: Enables AWS-compatible IAM APIs for managing users, roles, and policies.}{2024}{Bangalore, India}
+
+%---------- RIGHT COLUMN ----------
+\switchcolumn
+
+% Achievements
+\cvsection{Achievements}
+\begin{itemize}
+    \item Won the Smart India Hackathon — the first time in my college. Worked as part of a 5-member team, where I served as the team lead. We developed an Android application for the Ministry of Education, Government of India.
+    \item Secured Rank 3 in the Infosys Digital Make-a-Thon.
+\end{itemize}
+
+% Open source
+ \cvsection{Open Source}
+ \begin{itemize}
+     \item Contributor to Ceph (C/C++, Python) — a distributed object storage system.
+     \item Implemented IAM APIs, including Customer-Managed Policies and enhanced OIDC support.
+
+ \end{itemize}
+
+% Projects
+\cvsection{projects}
+\cvevent{Ticket Price Calculator App}{Java, Android Studio}{}{}
+\begin{itemize}
+    \item Developed an Android application to calculate trip ticket prices using Java, PostgreSQL, and Android Studio.
+    \item Implemented the UI and backend for the application to support interaction across multiple screens and handle user input.
+\end{itemize}
+\cvevent{Transaction Management CLI}{C++, Visual Studio}{}{}
+\begin{itemize}
+    \item Developed a sample banking system using C++ to simulate common bank account functionalities.
+    \item A CLI-based application supporting actions such as account creation, deposit, withdrawal, and admin/user management.
+\end{itemize}
+
+% Profiles
+\cvsection{profiles}
+  \begin{itemize}
+  \item \href{https://www.codechef.com/users/rajaram_26}{CodeChef: rajaram\_26}
+  \item \href{https://leetcode.com/ArbitCode}{LeetCode: ArbitCode}
+  \item \href{https://arbitcode.in}{Portfolio: arbitcode.in}
+  \end{itemize}
+
+% Skills
+\cvsection{skills}
+  \begin{itemize}
+    \item C++, Core Java, JavaScript
+    \item AWS, MySQL, Git
+    \item Design Patterns, Node.js, React.js
+  \end{itemize}
+
+% Education
+\cvsection{Education}
+\cvevent{B.Tech - in Computer Science}{Galgotias University}{2017 -- 2021}{UP, India}
+
+%---------- END OF TWO COLUMNS ----------
+\end{paracol}
+
+\end{document}
